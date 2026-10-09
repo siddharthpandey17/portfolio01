@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siddharth Pandey — Web Developer & Digital Marketer | Kanpur</title>
+<meta name="description" content="Portfolio of Siddharth Pandey — web development and digital marketing freelancer based in Kanpur, Uttar Pradesh.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FAFAF7;--card:#fff;--ink:#16181D;--mut:#5E6472;--line:#E7E7E1;--acc:#0F9D74;--acc2:#E8F7F1}
+[data-theme="dark"]{--bg:#0E1013;--card:#161A1F;--ink:#F2F3F5;--mut:#9AA1AE;--line:#262B33;--acc:#2DD4A0;--acc2:#12261F}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;transition:background .3s,color .3s}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif;line-height:1.15}
+a{color:inherit;text-decoration:none}
+.w{max-width:960px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .w{display:flex;align-items:center;justify-content:space-between;height:62px;position:relative}
+.logo{font:700 1.1rem 'Space Grotesk'}
+.logo span{color:var(--acc)}
+nav{display:flex;align-items:center;gap:4px}
+nav a{padding:8px 12px;font-size:.9rem;color:var(--mut);border-radius:8px}
+nav a:hover{color:var(--ink);background:var(--acc2)}
+.ib{background:none;border:1px solid var(--line);border-radius:8px;width:36px;height:36px;cursor:pointer;color:var(--ink);font-size:1rem;display:grid;place-items:center;margin-left:6px}
+.mt{display:none}
+.hero{padding:88px 0 64px}
+.hello{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;color:var(--acc);font-weight:600;background:var(--acc2);padding:6px 14px;border-radius:30px;margin-bottom:20px}
+.hello i{width:8px;height:8px;border-radius:50%;background:var(--acc);animation:pl 2s infinite}
+@keyframes pl{0%,100%{opacity:1}50%{opacity:.35}}
+.hero h1{font-size:clamp(2.2rem,6vw,3.6rem);font-weight:700;max-width:720px}
+.hero h1 em{font-style:normal;color:var(--acc)}
+.hero p{color:var(--mut);font-size:1.08rem;margin:18px 0 28px;max-width:540px}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 24px;border-radius:10px;font-weight:600;font-size:.92rem;border:1.5px solid var(--ink);transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
+.b1{background:var(--ink);color:var(--bg)}
+.b2{background:transparent;color:var(--ink)}
+section{padding:64px 0}
+.sh{margin-bottom:30px}
+.sh small{color:var(--acc);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.75rem}
+.sh h2{font-size:1.8rem;margin-top:6px}
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:36px}
+.about p{color:var(--mut);margin-bottom:14px}
+.facts{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+.facts div{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:.9rem}
+.facts div:last-child{border:0}
+.facts span{color:var(--mut)}
+.facts b{text-align:right}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{background:var(--card);border:1px solid var(--line);padding:9px 16px;border-radius:30px;font-size:.88rem;font-weight:500;transition:border-color .2s,transform .2s}
+.chip:hover{border-color:var(--acc);transform:translateY(-2px)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;transition:transform .2s,box-shadow .2s,border-color .2s}
+.card:hover{transform:translateY(-5px);border-color:var(--acc);box-shadow:0 14px 30px rgba(0,0,0,.08)}
+.card .tag{font-size:.72rem;font-weight:700;color:var(--acc);letter-spacing:.06em;text-transform:uppercase}
+.card h3{font-size:1.1rem;margin:8px 0}
+.card p{color:var(--mut);font-size:.9rem}
+.card .st{margin-top:12px;font-size:.8rem;color:var(--mut)}
+.srv .n{font:700 1.4rem 'Space Grotesk';color:var(--acc);margin-bottom:6px}
+.ct{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:40px;text-align:center}
+.ct h2{font-size:1.8rem;margin-bottom:10px}
+.ct p{color:var(--mut);margin-bottom:24px}
+.ct .row{justify-content:center}
+footer{padding:28px 0;text-align:center;color:var(--mut);font-size:.84rem;border-top:1px solid var(--line)}
+.rv{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
+@media(max-width:760px){
+.mt{display:grid}
+nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--card);border:1px solid var(--line);border-radius:12px;flex-direction:column;align-items:stretch;padding:10px;margin-top:6px}
+nav.o{display:flex}
+.about{grid-template-columns:1fr}
+.hero{padding-top:56px}
+.ct{padding:28px 20px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<header><div class="w">
+<a href="#" class="logo">siddharth<span>.</span>dev</a>
+<nav id="nav">
+<a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#services">Services</a><a href="#contact">Contact</a>
+<button class="ib" id="th" aria-label="Toggle theme">◐</button>
+</nav>
+<button class="ib mt" id="mt" aria-label="Menu">☰</button>
+</div></header>
+
+<main>
+<section class="hero"><div class="w">
+<span class="hello"><i></i> Available for freelance work</span>
+<h1>Hi, main <em>Siddharth Pandey</em> hoon — web developer &amp; digital marketer.</h1>
+<p>Kanpur se, main fast aur clean websites banata hoon aur businesses ko online grow karne mein help karta hoon.</p>
+<div class="row"><a href="#projects" class="btn b1">Mera Kaam Dekhein</a><a href="#contact" class="btn b2">Contact Karein</a></div>
+</div></section>
+
+<section id="about"><div class="w">
+<div class="sh rv"><small>About</small><h2>Mere baare mein</h2></div>
+<div class="about">
+<div class="rv">
+<p>Main Kanpur, Uttar Pradesh mein web development aur digital marketing par kaam karta hoon. Websites, landing pages aur business tools banata hoon jo simple, fast aur use karne mein asaan hon.</p>
+<p>Saath hi main Gaurav Coaching Institute chalata hoon, jahan students ko computer courses, NIOS/Open Board admission counselling aur digital marketing sikhaya jaata hai.</p>
+</div>
+<div class="facts rv">
+<div><span>Location</span><b>Kanpur, UP</b></div>
+<div><span>Focus</span><b>Web Dev &amp; Digital Marketing</b></div>
+<div><span>Studying</span><b>MCA</b></div>
+<div><span>Status</span><b>Open to freelance</b></div>
+</div>
+</div></div></section>
+
+<section id="skills"><div class="w">
+<div class="sh rv"><small>Skills</small><h2>Tools jo main use karta hoon</h2></div>
+<div class="chips rv">
+<span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">Bootstrap</span><span class="chip">PHP</span><span class="chip">MySQL</span><span class="chip">SEO</span><span class="chip">Social Media Marketing</span><span class="chip">Meta Ads</span><span class="chip">EmailJS</span>
+</div></div></section>
+
+<section id="projects"><div class="w">
+<div class="sh rv"><small>Projects</small><h2>Kuch selected kaam</h2></div>
+<!-- Add live links / screenshots to each card when ready -->
+<div class="grid">
+<div class="card rv"><span class="tag">Education</span><h3>Gaurav Coaching Institute Website</h3><p>Multi-page responsive website — courses, admission form, gallery aur contact — HTML, CSS aur JS mein.</p><div class="st">HTML · CSS · JS · Bootstrap</div></div>
+<div class="card rv"><span class="tag">Web App</span><h3>SMM Panel — socialmediaboost247.in</h3><p>Order notification system (EmailJS) aur UTR-based payment verification (PHP + MySQL).</p><div class="st">PHP · MySQL · EmailJS</div></div>
+<div class="card rv"><span class="tag">Healthcare</span><h3>Hospital Website Template</h3><p>Appointment-first hospital website — doctors, departments, packages aur WhatsApp booking ke saath.</p><div class="st">Bootstrap 5 · JS · SEO</div></div>
+</div></div></section>
+
+<section id="services"><div class="w">
+<div class="sh rv"><small>Services</small><h2>Main kya kar sakta hoon</h2></div>
+<div class="grid srv">
+<div class="card rv"><div class="n">01</div><h3>Website Development</h3><p>Business, portfolio aur landing pages — mobile-friendly aur fast loading.</p></div>
+<div class="card rv"><div class="n">02</div><h3>Digital Marketing</h3><p>SEO, social media aur ads se online reach aur leads badhana.</p></div>
+<div class="card rv"><div class="n">03</div><h3>Web Tools &amp; Automation</h3><p>Forms, notifications aur payment/order workflows ka custom setup.</p></div>
+</div></div></section>
+
+<section id="contact"><div class="w">
+<div class="ct rv">
+<h2>Chalo saath mein kaam karte hain</h2>
+<p>Website ya marketing ka koi project hai? Message karein — jaldi reply milega.</p>
+<!-- Replace email / phone / social links below -->
+<div class="row">
+<a class="btn b1" href="mailto:you@example.com">Email Karein</a>
+<a class="btn b2" href="https://wa.me/910000000000" target="_blank" rel="noopener">WhatsApp</a>
+<a class="btn b2" href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener">LinkedIn</a>
+</div>
+</div></div></section>
+</main>
+
+<footer><div class="w">© 2026 Siddharth Pandey · Kanpur, Uttar Pradesh</div></footer>
+
+<script>
+(function(){
+var $=function(s){return document.querySelector(s)},A=function(s){return document.querySelectorAll(s)};
+var root=document.documentElement;
+try{var t=localStorage.getItem('theme');if(t)root.dataset.theme=t;else if(matchMedia('(prefers-color-scheme: dark)').matches)root.dataset.theme='dark'}catch(e){}
+$('#th').onclick=function(){var n=root.dataset.theme==='dark'?'light':'dark';root.dataset.theme=n;try{localStorage.setItem('theme',n)}catch(e){}};
+var nav=$('#nav');
+$('#mt').onclick=function(){nav.classList.toggle('o')};
+A('nav a').forEach(function(a){a.onclick=function(){nav.classList.remove('o')}});
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});A('.rv').forEach(function(el,i){el.style.transitionDelay=(i%3)*80+'ms';io.observe(el)})}else{A('.rv').forEach(function(el){el.classList.add('in')})}
+})();
+</script>
+</body>
+</html>
